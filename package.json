@@ -7,7 +7,11 @@
 		"ch02"
 	],
 	"scripts": {
+		"dev": "node",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"fmt": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"prettier": "^2.8.7"
 	}
 }

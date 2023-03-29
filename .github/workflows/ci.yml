@@ -20,17 +20,7 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
-      - name: Install JS/TS modules
+      - name: Install dependencies
         run: yarn -A
       - name: Run lint
-        run: yarn workspaces run lint
-
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repository
-        uses: actions/checkout@v3
-      - name: Install JS/TS modules
-        run: yarn -A
-      - name: Run format
-        run: yarn workspaces run format
+        run: yarn lint
