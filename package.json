@@ -1,11 +1,17 @@
 {
 	"name": "book-js",
-	"version": "1.0.0",
+	"version": "0.0.2",
+	"license": "MIT",
 	"private": true,
+	"workspaces": [
+		"ch02"
+	],
 	"scripts": {
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"check": "prettier --plugin-search-dir . --check . && eslint .",
+		"dev": "node",
+		"fmt": "prettier --plugin-search-dir . --write ."
 	},
-	"workspaces": [],
-	"license": "MIT"
+	"devDependencies": {
+		"prettier": "^2.8.7"
+	}
 }
