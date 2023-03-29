@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 2 * * 0'
+
+env: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+      - name: Install JS/TS modules
+        run: yarn -A
+      - name: Run lint
+        run: yarn workspaces run lint
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+      - name: Install JS/TS modules
+        run: yarn -A
+      - name: Run format
+        run: yarn workspaces run format
