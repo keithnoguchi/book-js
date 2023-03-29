@@ -1,11 +1,13 @@
 {
 	"name": "book-js",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"license": "MIT",
 	"private": true,
+	"workspaces": [
+		"ch02"
+	],
 	"scripts": {
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
-	},
-	"workspaces": [],
-	"license": "MIT"
+	}
 }
