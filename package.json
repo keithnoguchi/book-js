@@ -7,8 +7,8 @@
 		"ch02"
 	],
 	"scripts": {
+		"check": "prettier --plugin-search-dir . --check . && eslint .",
 		"dev": "node",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"fmt": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {

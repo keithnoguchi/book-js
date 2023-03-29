@@ -15,12 +15,12 @@ defaults:
     shell: bash
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: yarn -A
-      - name: Run lint
-        run: yarn lint
+        run: yarn
+      - name: Run check
+        run: yarn check
