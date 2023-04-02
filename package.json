@@ -7,7 +7,8 @@
 	"license": "MIT",
 	"private": true,
 	"workspaces": [
-		"ch02"
+		"ch02",
+		"ch03"
 	],
 	"scripts": {
 		"fmt": "prettier --plugin-search-dir . --write .",
