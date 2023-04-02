@@ -1,17 +1,20 @@
 {
-	"name": "book-js",
-	"version": "0.0.2",
+	"name": "algorithms-js",
+	"version": "0.0.1",
+	"description": "JavaScript Algorithms and Data Structures",
+	"repository": "https://github.com/keithnoguchi/algorithms-js",
+	"author": "Keith Noguchi <keith@noguchi.us>",
 	"license": "MIT",
 	"private": true,
 	"workspaces": [
-		"ch02"
+		"power"
 	],
 	"scripts": {
-		"check": "prettier --plugin-search-dir . --check . && eslint .",
-		"dev": "node",
-		"fmt": "prettier --plugin-search-dir . --write ."
+		"fmt": "prettier --plugin-search-dir . --write .",
+		"lint": "prettier --plugin-search-dir . --check . && eslint ."
 	},
 	"devDependencies": {
+		"eslint": "^8.37.0",
 		"prettier": "^2.8.7"
 	}
 }
