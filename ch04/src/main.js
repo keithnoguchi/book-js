@@ -93,3 +93,5 @@ const JOURNAL = [
 	{"events":["bread","brushed teeth","television","weekend"],"squirrel":false},
 	{"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
 ];
+
+console.log(JOURNAL.length);
