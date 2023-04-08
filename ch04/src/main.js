@@ -6,6 +6,11 @@
 // $ node src/main.js
 // ```
 
+function main(journal) {
+	console.log('first run:');
+	printCorrelation(journal);
+}
+
 // Phi coefficient
 //
 // https://en.wikipedia.org/wiki/Phi_coefficient
@@ -281,5 +286,4 @@ const JOURNAL = [
 	}
 ];
 
-console.log('first run:');
-printCorrelation(JOURNAL);
+main(JOURNAL);
