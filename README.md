@@ -10,6 +10,6 @@ The examples from [Eloquent JavaScript], aka the book.
 
 - [Chapter 02: A chess board](ch02/src/main.js)
 - [Chapter 03: Do `+5` or `*3` algorithm](ch03/src/main.js)
-- [Chapter 04: A tale of Jaques, the weresquirrel](ch04/src/main.js)
+- [Chapter 04: The Lyncanthrope's Log](ch04/src/main.js)
 
 Happy Hacking!

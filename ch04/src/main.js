@@ -1,4 +1,54 @@
-// A tale of Jaques, the Weresquirrel
+// The Lycanthrope's Log
+//
+// # Examples
+//
+// ```
+// $ node src/main.js
+// ```
+
+// Phi coefficient
+//
+// https://en.wikipedia.org/wiki/Phi_coefficient
+function phi([n00, n01, n10, n11]) {
+	// (n00 * n11 - n10 * n01) / sqrt(n1* x n0* x n*0 x n*1)
+	return (n00 * n11 - n10 * n01) /
+		Math.sqrt((n10 + n11) * (n00 + n01) * (n00 + n10) * (n01 + n11));
+}
+
+// Creates the coefficient table for each event.
+function tableFor(event, journal) {
+	let table = [0, 0, 0, 0];
+	for (let entry of journal) {
+		let index = 0;
+		if (entry.events.includes(event)) index += 1;
+		if (entry.squirrel) index += 2;
+		table[index] += 1;
+	}
+	return table;
+}
+
+// Creates a hash set of the events from the journal array.
+function journalEvents(journal) {
+	let events = [];
+	for (let entry of journal) {
+		for (let event of entry.events) {
+			if (!events.includes(event)) {
+				events.push(event);
+			}
+		}
+	}
+	return events;
+}
+
+// Prints the correlation.
+function printCorrelation(journal, [below, above] = [-0.1, 0.1]) {
+	for (let event of journalEvents(journal)) {
+		let correlation = phi(tableFor(event, journal));
+		if (correlation < below || correlation > above) {
+			console.log('\t' + event + ':', correlation);
+		}
+	}
+}
 
 // From https://eloquentjavascript.net/code/chapter/04_data.zip
 const JOURNAL = [
@@ -231,4 +281,5 @@ const JOURNAL = [
 	}
 ];
 
-console.log(JOURNAL.length);
+console.log('first run:');
+printCorrelation(JOURNAL);
