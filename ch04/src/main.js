@@ -25,8 +25,10 @@ function main(journal) {
 
 	// Adds the peanuts teeth event.
 	for (let entry of journal) {
-		if (entry.events.includes('peanuts') &&
-			!entry.events.includes('brushed teeth')) {
+		if (
+			entry.events.includes('peanuts') &&
+			!entry.events.includes('brushed teeth')
+		) {
 			entry.events.push('peanuts teeth');
 		}
 	}
