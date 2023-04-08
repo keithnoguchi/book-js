@@ -16,8 +16,10 @@ function main(journal) {
 // https://en.wikipedia.org/wiki/Phi_coefficient
 function phi([n00, n01, n10, n11]) {
 	// (n00 * n11 - n10 * n01) / sqrt(n1* x n0* x n*0 x n*1)
-	return (n00 * n11 - n10 * n01) /
-		Math.sqrt((n10 + n11) * (n00 + n01) * (n00 + n10) * (n01 + n11));
+	return (
+		(n00 * n11 - n10 * n01) /
+		Math.sqrt((n10 + n11) * (n00 + n01) * (n00 + n10) * (n01 + n11))
+	);
 }
 
 // Creates the coefficient table for each event.
