@@ -1,0 +1,9 @@
+{
+	"name": "ch04",
+	"version": "0.0.1",
+	"main": "src/main.js",
+	"license": "MIT",
+	"scripts": {
+		"test": "node src/main.js"
+	}
+}
