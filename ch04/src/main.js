@@ -4,11 +4,36 @@
 //
 // ```
 // $ node src/main.js
+// $ n src/main.js
+// first run:
+// 	weekend: 0.13719886811400708
+// 	brushed teeth: -0.3805211953235953
+// 	candy: 0.12964074471043288
+// 	work: -0.13719886811400708
+// 	spaghetti: 0.242535625036333
+// 	reading: 0.11068280537595927
+// 	peanuts: 0.59026798116852
+//
+// second run:
+// 	peanuts: 0.59026798116852
+// 	peanuts teeth: 1
 // ```
 
 function main(journal) {
 	console.log('first run:');
 	printCorrelation(journal);
+
+	// Adds the peanuts teeth event.
+	for (let entry of journal) {
+		if (entry.events.includes('peanuts') &&
+			!entry.events.includes('brushed teeth')) {
+			entry.events.push('peanuts teeth');
+		}
+	}
+
+	// Just shows the peanuts teeth events.
+	console.log('\nsecond run:');
+	printCorrelation(journal, [-0.5, 0.5]);
 }
 
 // Phi coefficient
