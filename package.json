@@ -9,7 +9,8 @@
 	"workspaces": [
 		"ch02",
 		"ch03",
-		"ch04"
+		"ch04",
+		"ch05"
 	],
 	"scripts": {
 		"fmt": "prettier --plugin-search-dir . --write .",
